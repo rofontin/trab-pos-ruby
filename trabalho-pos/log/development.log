@@ -1,0 +1,553 @@
+Started GET "/" for ::1 at 2022-10-28 19:47:54 -0300
+Started GET "/" for ::1 at 2022-10-28 19:47:54 -0300
+Processing by Rails::WelcomeController#index as HTML
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/thiago/.rvm/gems/ruby-3.0.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendering /home/thiago/.rvm/gems/ruby-3.0.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/thiago/.rvm/gems/ruby-3.0.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 22.9ms | Allocations: 741)
+  Rendered /home/thiago/.rvm/gems/ruby-3.0.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 2.3ms | Allocations: 588)
+Completed 200 OK in 396ms (Views: 147.5ms | ActiveRecord: 0.0ms | Allocations: 7599)
+
+
+Completed 200 OK in 393ms (Views: 147.8ms | ActiveRecord: 0.0ms | Allocations: 7388)
+
+
+  [1m[35m (32.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (21.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateProducts (20221028224837)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (4.9ms)[0m  [1m[35mCREATE TABLE "products" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "value" text, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221028224837"]]
+  [1m[36mTRANSACTION (17.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateCategories (20221028224849)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (4.9ms)[0m  [1m[35mCREATE TABLE "categories" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "categoryName" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221028224849"]]
+  [1m[36mTRANSACTION (20.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddForeignKeyCategoryToProduct (20221028225001)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "products" ADD "name" varchar[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddForeignKeyCategoryToProduct (20221028225001)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (4.7ms)[0m  [1m[35mALTER TABLE "products" ADD "categoryName" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "products" ADD "reference" varchar[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221028225001"]]
+  [1m[36mTRANSACTION (25.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (4.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-10-28 22:51:17.442380"], ["updated_at", "2022-10-28 22:51:17.442380"]]
+  [1m[36mTRANSACTION (20.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2022-10-28 19:51:35 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/thiago/.rvm/gems/ruby-3.0.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/thiago/.rvm/gems/ruby-3.0.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 5.4ms | Allocations: 626)
+Completed 200 OK in 56ms (Views: 20.6ms | ActiveRecord: 0.0ms | Allocations: 5645)
+
+
+Started GET "/routes" for ::1 at 2022-10-28 19:51:41 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/routes"):
+  
+Started POST "/categories" for ::1 at 2022-10-28 19:52:02 -0300
+Processing by CategoriesController#create as */*
+  Parameters: {"category"=>{"nameCategory"=>"Utilitarios"}}
+[31mUnpermitted parameter: :nameCategory. Context: { controller: CategoriesController, action: create, request: #<ActionDispatch::Request:0x00007f993c6e3d90>, params: {"category"=>{"nameCategory"=>"Utilitarios"}, "controller"=>"categories", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/categories_controller.rb:20:in `create'
+  [1m[36mCategory Create (6.1ms)[0m  [1m[32mINSERT INTO "categories" ("categoryName", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["categoryName", nil], ["created_at", "2022-10-28 22:52:02.752681"], ["updated_at", "2022-10-28 22:52:02.752681"]]
+  ↳ app/controllers/categories_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (23.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/categories_controller.rb:20:in `create'
+Completed 201 Created in 91ms (Views: 0.8ms | ActiveRecord: 38.5ms | Allocations: 17185)
+
+
+Started POST "/categories" for ::1 at 2022-10-28 19:52:14 -0300
+Processing by CategoriesController#create as */*
+  Parameters: {"category"=>{"categoryName"=>"Utilitarios"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/categories_controller.rb:20:in `create'
+  [1m[36mCategory Create (5.0ms)[0m  [1m[32mINSERT INTO "categories" ("categoryName", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["categoryName", "Utilitarios"], ["created_at", "2022-10-28 22:52:15.007273"], ["updated_at", "2022-10-28 22:52:15.007273"]]
+  ↳ app/controllers/categories_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (19.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/categories_controller.rb:20:in `create'
+Completed 201 Created in 31ms (Views: 0.4ms | ActiveRecord: 24.7ms | Allocations: 1848)
+
+
+Started DELETE "/categories/1" for ::1 at 2022-10-28 19:52:23 -0300
+Processing by CategoriesController#destroy as */*
+  Parameters: {"category"=>{"categoryName"=>"Utilitarios"}, "id"=>"1"}
+  [1m[36mCategory Load (1.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:44:in `set_category'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/categories_controller.rb:38:in `destroy'
+  [1m[36mCategory Destroy (4.7ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/categories_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (20.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/categories_controller.rb:38:in `destroy'
+Completed 204 No Content in 40ms (ActiveRecord: 27.1ms | Allocations: 2774)
+
+
+Started GET "/categories" for ::1 at 2022-10-28 19:52:38 -0300
+Processing by CategoriesController#index as */*
+  Parameters: {"category"=>{"categoryName"=>"Utilitarios"}}
+  [1m[36mCategory Load (1.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 1.7ms | Allocations: 797)
+
+
+Started GET "/products" for ::1 at 2022-10-28 19:53:29 -0300
+Processing by ProductsController#index as */*
+  Parameters: {"category"=>{"name"=>"categoria1"}, "product"=>{}}
+  [1m[36mProduct Load (1.8ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 4.6ms | Allocations: 807)
+
+
+Started GET "/products" for ::1 at 2022-10-28 19:54:45 -0300
+Processing by ProductsController#index as */*
+  Parameters: {"products"=>{"name"=>"Martelo", "value"=>"22,50", "categoryName"=>"1"}, "product"=>{}}
+  [1m[36mProduct Load (1.7ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 1.6ms | ActiveRecord: 1.7ms | Allocations: 619)
+
+
+Started POST "/products" for ::1 at 2022-10-28 19:54:50 -0300
+Processing by ProductsController#create as */*
+  Parameters: {"products"=>{"name"=>"Martelo", "value"=>"22,50", "categoryName"=>"1"}, "product"=>{}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 206)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: product
+Did you mean?  products):
+  
+app/controllers/products_controller.rb:49:in `product_params'
+app/controllers/products_controller.rb:18:in `create'
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RemoveReferenceFromproducts (20221028225833)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Create (3.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221028225833"]]
+  [1m[36mTRANSACTION (18.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/routes" for ::1 at 2022-10-28 20:01:05 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/routes"):
+  
+Started GET "/categories" for ::1 at 2022-10-28 20:01:15 -0300
+Processing by CategoriesController#index as */*
+  Parameters: {"category"=>{"categoryName"=>"Utilitarios"}}
+  [1m[36mCategory Load (1.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 76ms (Views: 65.2ms | ActiveRecord: 10.3ms | Allocations: 15599)
+
+
+Started POST "/products" for ::1 at 2022-10-28 20:01:20 -0300
+Processing by ProductsController#create as */*
+  Parameters: {"products"=>{"name"=>"Martelo", "value"=>"22,50", "categoryName"=>"1"}, "product"=>{}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 2.8ms | Allocations: 271)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: product
+Did you mean?  products):
+  
+app/controllers/products_controller.rb:49:in `product_params'
+app/controllers/products_controller.rb:18:in `create'
+Started POST "/products" for ::1 at 2022-10-28 20:04:04 -0300
+Processing by ProductsController#create as */*
+  Parameters: {"products"=>{"name"=>"Martelo", "value"=>"22,50"}, "product"=>{}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 158)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: product
+Did you mean?  products):
+  
+app/controllers/products_controller.rb:49:in `product_params'
+app/controllers/products_controller.rb:18:in `create'
+Started POST "/products" for ::1 at 2022-10-28 20:04:19 -0300
+Processing by ProductsController#create as */*
+  Parameters: {"product"=>{"name"=>"Martelo", "value"=>"22,50", "categoryName"=>"1"}}
+[31mUnpermitted parameter: :categoryName. Context: { controller: ProductsController, action: create, request: #<ActionDispatch::Request:0x00007f77a054b568>, params: {"product"=>{"name"=>"Martelo", "value"=>"22,50", "categoryName"=>"1"}, "controller"=>"products", "action"=>"create"} }[0m
+Completed 422 Unprocessable Entity in 266ms (Views: 134.5ms | ActiveRecord: 3.4ms | Allocations: 21023)
+
+
+Started POST "/products" for ::1 at 2022-10-28 20:04:28 -0300
+Processing by ProductsController#create as */*
+  Parameters: {"product"=>{"name"=>"Martelo", "value"=>"22,50", "categoryName"=>"2"}}
+[31mUnpermitted parameter: :categoryName. Context: { controller: ProductsController, action: create, request: #<ActionDispatch::Request:0x00007f779c114048>, params: {"product"=>{"name"=>"Martelo", "value"=>"22,50", "categoryName"=>"2"}, "controller"=>"products", "action"=>"create"} }[0m
+Completed 422 Unprocessable Entity in 2ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 682)
+
+
+Started POST "/products" for ::1 at 2022-10-28 20:04:44 -0300
+Processing by ProductsController#create as */*
+  Parameters: {"product"=>{"name"=>"Martelo", "value"=>"22,50", "categoryName"=>"Utilitarios"}}
+[31mUnpermitted parameter: :categoryName. Context: { controller: ProductsController, action: create, request: #<ActionDispatch::Request:0x00007f77a0c7eda8>, params: {"product"=>{"name"=>"Martelo", "value"=>"22,50", "categoryName"=>"Utilitarios"}, "controller"=>"products", "action"=>"create"} }[0m
+Completed 422 Unprocessable Entity in 2ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 676)
+
+
+Started POST "/products" for ::1 at 2022-10-28 20:05:59 -0300
+Processing by ProductsController#create as */*
+  Parameters: {"product"=>{"name"=>"Martelo", "value"=>"22,50", "category"=>"2"}}
+[31mUnpermitted parameter: :category. Context: { controller: ProductsController, action: create, request: #<ActionDispatch::Request:0x00007f77ac19f7c8>, params: {"product"=>{"name"=>"Martelo", "value"=>"22,50", "category"=>"2"}, "controller"=>"products", "action"=>"create"} }[0m
+Completed 422 Unprocessable Entity in 2ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 675)
+
+
+Started POST "/products" for ::1 at 2022-10-28 20:06:16 -0300
+Processing by ProductsController#create as */*
+  Parameters: {"product"=>{"name"=>"Martelo", "value"=>"22,50", "category"=>"Utilitários"}}
+[31mUnpermitted parameter: :category. Context: { controller: ProductsController, action: create, request: #<ActionDispatch::Request:0x00007f779c13e4d8>, params: {"product"=>{"name"=>"Martelo", "value"=>"22,50", "category"=>"Utilitários"}, "controller"=>"products", "action"=>"create"} }[0m
+Completed 422 Unprocessable Entity in 2ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 674)
+
+
+Started POST "/products" for ::1 at 2022-10-28 20:06:25 -0300
+Processing by ProductsController#create as */*
+  Parameters: {"product"=>{"name"=>"Martelo", "value"=>"22,50"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 591)
+
+
+Started GET "/categories" for ::1 at 2022-10-28 20:06:45 -0300
+Processing by CategoriesController#index as */*
+  Parameters: {"category"=>{"categoryName"=>"Utilitarios"}}
+  [1m[36mCategory Load (1.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 1.5ms | Allocations: 717)
+
+
+Started POST "/products" for ::1 at 2022-10-28 20:07:03 -0300
+Processing by ProductsController#create as */*
+  Parameters: {"product"=>{"name"=>"Martelo", "value"=>"22,50", "categoryName"=>"2"}}
+[31mUnpermitted parameter: :categoryName. Context: { controller: ProductsController, action: create, request: #<ActionDispatch::Request:0x00007f779c15dd60>, params: {"product"=>{"name"=>"Martelo", "value"=>"22,50", "categoryName"=>"2"}, "controller"=>"products", "action"=>"create"} }[0m
+Completed 422 Unprocessable Entity in 2ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 674)
+
+
+Started POST "/products" for ::1 at 2022-10-28 20:07:31 -0300
+Processing by ProductsController#create as */*
+  Parameters: {"product"=>{"name"=>"Martelo", "value"=>"22,50", "categoryName"=>"Utilitarios"}}
+[31mUnpermitted parameter: :categoryName. Context: { controller: ProductsController, action: create, request: #<ActionDispatch::Request:0x00007f77980ffb10>, params: {"product"=>{"name"=>"Martelo", "value"=>"22,50", "categoryName"=>"Utilitarios"}, "controller"=>"products", "action"=>"create"} }[0m
+Completed 422 Unprocessable Entity in 2ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 682)
+
+
+Started POST "/products" for ::1 at 2022-10-28 20:07:35 -0300
+Processing by ProductsController#create as */*
+  Parameters: {"product"=>{"name"=>"Martelo", "value"=>"22,50", "category"=>"Utilitarios"}}
+[31mUnpermitted parameter: :category. Context: { controller: ProductsController, action: create, request: #<ActionDispatch::Request:0x00007f77ac1e6cb8>, params: {"product"=>{"name"=>"Martelo", "value"=>"22,50", "category"=>"Utilitarios"}, "controller"=>"products", "action"=>"create"} }[0m
+Completed 422 Unprocessable Entity in 2ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 674)
+
+
+Started GET "/products" for ::1 at 2022-10-28 20:07:57 -0300
+Processing by ProductsController#index as */*
+  Parameters: {"product"=>{"name"=>"Martelo", "value"=>"22,50", "category"=>"Utilitarios"}}
+  [1m[36mProduct Load (1.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 1.6ms | Allocations: 738)
+
+
+Started POST "/products" for ::1 at 2022-10-28 20:08:02 -0300
+Processing by ProductsController#create as */*
+  Parameters: {"product"=>{"name"=>"Martelo", "value"=>"22,50", "category"=>"Utilitarios"}}
+[31mUnpermitted parameter: :category. Context: { controller: ProductsController, action: create, request: #<ActionDispatch::Request:0x00007f7798115fa0>, params: {"product"=>{"name"=>"Martelo", "value"=>"22,50", "category"=>"Utilitarios"}, "controller"=>"products", "action"=>"create"} }[0m
+Completed 422 Unprocessable Entity in 2ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 674)
+
+
+Started POST "/product" for ::1 at 2022-10-28 20:08:06 -0300
+  
+ActionController::RoutingError (No route matches [POST] "/product"):
+  
+Started POST "/products" for ::1 at 2022-10-28 20:08:10 -0300
+Processing by ProductsController#create as */*
+  Parameters: {"product"=>{"name"=>"Martelo", "value"=>"22,50", "category"=>"Utilitarios"}}
+[31mUnpermitted parameter: :category. Context: { controller: ProductsController, action: create, request: #<ActionDispatch::Request:0x00007f779c17e498>, params: {"product"=>{"name"=>"Martelo", "value"=>"22,50", "category"=>"Utilitarios"}, "controller"=>"products", "action"=>"create"} }[0m
+Completed 422 Unprocessable Entity in 2ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 674)
+
+
+Started POST "/products" for ::1 at 2022-10-28 20:09:20 -0300
+Processing by ProductsController#create as */*
+  Parameters: {"product"=>{"name"=>"Martelo", "value"=>"22,50", "category_id"=>"2"}}
+[31mUnpermitted parameter: :category_id. Context: { controller: ProductsController, action: create, request: #<ActionDispatch::Request:0x00007f779813f170>, params: {"product"=>{"name"=>"Martelo", "value"=>"22,50", "category_id"=>"2"}, "controller"=>"products", "action"=>"create"} }[0m
+Completed 422 Unprocessable Entity in 2ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 674)
+
+
+  [1m[35m (28.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (23.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateProducts (20221028224837)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "products" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "value" text, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221028224837"]]
+  [1m[36mTRANSACTION (19.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateCategories (20221028224849)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (5.9ms)[0m  [1m[35mCREATE TABLE "categories" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221028224849"]]
+  [1m[36mTRANSACTION (21.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddForeignKeyCategoryToProduct (20221028225001)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (5.2ms)[0m  [1m[35mALTER TABLE "products" ADD "category_id" integer[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_products_on_category_id" ON "products" ("category_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221028225001"]]
+  [1m[36mTRANSACTION (22.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (7.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-10-28 23:18:57.716463"], ["updated_at", "2022-10-28 23:18:57.716463"]]
+  [1m[36mTRANSACTION (19.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Create (4.8ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Utilitarios"], ["created_at", "2022-10-28 23:20:55.248877"], ["updated_at", "2022-10-28 23:20:55.248877"]]
+  [1m[36mTRANSACTION (19.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Load (1.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Create (5.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "value", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Martelo"], ["value", "22,5"], ["created_at", "2022-10-28 23:22:16.665763"], ["updated_at", "2022-10-28 23:22:16.665763"], ["category_id", 1]]
+  [1m[36mTRANSACTION (20.7ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/products" for ::1 at 2022-10-28 20:24:01 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#index as */*
+  Parameters: {"product"=>{"name"=>"Martelo", "value"=>"22,50", "category_id"=>"2"}}
+  [1m[36mProduct Load (2.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8:in `index'
+Completed 200 OK in 51ms (Views: 16.4ms | ActiveRecord: 8.4ms | Allocations: 29329)
+
+
+Started GET "/routes" for ::1 at 2022-10-28 20:27:33 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/routes"):
+  
+Started GET "/categories" for ::1 at 2022-10-28 20:27:38 -0300
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (1.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 32ms (Views: 4.0ms | ActiveRecord: 7.0ms | Allocations: 3833)
+
+
+Started GET "/categories" for ::1 at 2022-10-28 20:46:52 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (1.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 92ms (Views: 17.4ms | ActiveRecord: 9.9ms | Allocations: 30462)
+
+
+Started GET "/products" for ::1 at 2022-10-28 21:16:49 -0300
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (2.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8:in `index'
+Completed 200 OK in 83ms (Views: 61.9ms | ActiveRecord: 8.9ms | Allocations: 16604)
+
+
+Started GET "/products" for ::1 at 2022-10-28 21:28:09 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#index as */*
+  Parameters: {"product"=>{"name"=>"Martelo", "value"=>"22,50", "category_id"=>"2"}}
+  [1m[36mProduct Load (1.7ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8:in `index'
+Completed 200 OK in 55ms (Views: 18.2ms | ActiveRecord: 8.6ms | Allocations: 29325)
+
+
+Started GET "/categories" for ::1 at 2022-10-28 21:41:43 -0300
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (1.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 47ms (Views: 19.4ms | ActiveRecord: 10.5ms | Allocations: 3941)
+
+
+Started GET "/categories" for ::1 at 2022-10-28 21:41:43 -0300
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (1.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 1.5ms | Allocations: 713)
+
+
+Started GET "/categories" for ::1 at 2022-10-28 21:41:59 -0300
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (1.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 1.3ms | Allocations: 722)
+
+
+Started GET "/categories" for ::1 at 2022-10-28 21:41:59 -0300
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (1.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 1.6ms | Allocations: 710)
+
+
+Started GET "/categories" for ::1 at 2022-10-28 21:43:31 -0300
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (1.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 16ms (Views: 13.8ms | ActiveRecord: 1.7ms | Allocations: 710)
+
+
+Started GET "/categories" for ::1 at 2022-10-28 21:43:31 -0300
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (1.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 11ms (Views: 9.2ms | ActiveRecord: 1.5ms | Allocations: 710)
+
+
+Started GET "/categories" for ::1 at 2022-10-28 21:44:03 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CategoriesController#index as */*
+  Parameters: {"product"=>{"name"=>"Martelo", "value"=>"22,50", "category_id"=>"2"}, "category"=>{}}
+  [1m[36mCategory Load (4.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 97ms (Views: 35.8ms | ActiveRecord: 20.3ms | Allocations: 27755)
+
+
+Started GET "/categories" for ::1 at 2022-10-28 21:44:50 -0300
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (1.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 1.5ms | Allocations: 729)
+
+
+Started GET "/categories" for ::1 at 2022-10-28 21:44:50 -0300
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (2.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 2.5ms | Allocations: 710)
+
+
+Started GET "/categories" for ::1 at 2022-10-28 21:45:53 -0300
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (1.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 1.8ms | Allocations: 722)
+
+
+Started GET "/categories" for ::1 at 2022-10-28 21:45:53 -0300
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (2.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 3.4ms | ActiveRecord: 2.4ms | Allocations: 710)
+
+
+Started GET "/categories" for ::1 at 2022-10-28 21:49:54 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (2.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 92ms (Views: 16.6ms | ActiveRecord: 9.3ms | Allocations: 30461)
+
+
+Started GET "/categories" for ::1 at 2022-10-28 21:50:08 -0300
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (1.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 1.9ms | ActiveRecord: 1.4ms | Allocations: 728)
+
+
+Started GET "/categories" for ::1 at 2022-10-28 21:50:09 -0300
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (2.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 2.2ms | ActiveRecord: 2.8ms | Allocations: 711)
+
+
+Started GET "/categories" for ::1 at 2022-10-28 21:50:14 -0300
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (1.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 1.8ms | Allocations: 723)
+
+
+Started GET "/categories" for ::1 at 2022-10-28 21:50:14 -0300
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (2.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 2.2ms | Allocations: 711)
+
+
+Started GET "/categories" for ::1 at 2022-10-28 21:51:11 -0300
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (1.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 1.8ms | Allocations: 711)
+
+
+Started GET "/categories" for ::1 at 2022-10-28 21:51:11 -0300
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (1.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 1.8ms | Allocations: 711)
+
+
+Started GET "/categories" for ::1 at 2022-10-28 21:51:15 -0300
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (1.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 1.0ms | Allocations: 723)
+
+
+Started GET "/categories" for ::1 at 2022-10-28 21:51:15 -0300
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (1.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 1.9ms | Allocations: 711)
+
+
+Started GET "/categories" for ::1 at 2022-10-28 21:51:24 -0300
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (1.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 1.5ms | Allocations: 711)
+
+
+Started GET "/categories" for ::1 at 2022-10-28 21:51:24 -0300
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (1.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 16ms (Views: 14.1ms | ActiveRecord: 1.7ms | Allocations: 711)
+
+
+Started GET "/categories" for ::1 at 2022-10-29 10:38:57 -0300
+Started GET "/" for ::1 at 2022-10-29 10:38:57 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CategoriesController#index as */*
+  Parameters: {"category"=>{"categoryName"=>"teste"}}
+Processing by Rails::WelcomeController#index as HTML
+  [1m[36mCategory Load (2.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  Rendering /home/thiago/.rvm/gems/ruby-3.0.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+Completed 200 OK in 304ms (Views: 230.8ms | ActiveRecord: 12.2ms | Allocations: 29869)
+
+
+  Rendered /home/thiago/.rvm/gems/ruby-3.0.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 17.7ms | Allocations: 1125)
+Completed 200 OK in 260ms (Views: 67.0ms | ActiveRecord: 0.0ms | Allocations: 21104)
+
+
+Started GET "/categories" for ::1 at 2022-10-29 10:42:39 -0300
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (2.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 3.7ms | ActiveRecord: 2.7ms | Allocations: 728)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-10-29 10:42:40 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/categories" for ::1 at 2022-10-29 10:43:19 -0300
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (1.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 1.4ms | Allocations: 720)
+
+
+Started GET "/categories" for ::1 at 2022-10-29 10:43:19 -0300
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (3.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 2.8ms | ActiveRecord: 3.2ms | Allocations: 711)
+
+
