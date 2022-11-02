@@ -24,11 +24,11 @@ function CategoryList() {
   const [isLoading, setIsLoading] = useState(true);
 
   const deleteCategory = (categorie) => {
-    var accepted = confirm(`Você realmente gostaria de deletar a categoria: ${caregorie.title}`);
+    var accepted = confirm(`Você realmente gostaria de deletar a categoria: ${categorie.name}`);
     if (!accepted) return;
 
     setIsLoading(true);
-    CategoryService.destroy(caregorie.id)
+    CategoryService.destroy(categorie.id)
       .then((data) => {
         getCategories().then(() => {
           setIsLoading(false);
@@ -59,7 +59,7 @@ function CategoryList() {
     <Container fluid>
       <Grid container mt={2}>
         <Grid xs={6}>
-            <Typography variant="h4">Caregory List</Typography>
+            <Typography variant="h4">Category List</Typography>
         </Grid>
         <Grid xs={6}>
           <p>
@@ -68,7 +68,7 @@ function CategoryList() {
                 pathname: ROUTES.categories.new,
               }}
             >
-              <Button variant="contained" color="success" size="small" startIcon={<DeleteForeverIcon fontSize="small" />}>
+              <Button variant="contained" color="success" size="small">
                 New Category
               </Button>
             </Link>
