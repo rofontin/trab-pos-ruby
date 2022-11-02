@@ -29,6 +29,11 @@
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/categories.js"
+    ],
+    "/categories/[id]/edit": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/categories/[id]/edit.js"
     ]
   },
   "ampFirstPages": []
