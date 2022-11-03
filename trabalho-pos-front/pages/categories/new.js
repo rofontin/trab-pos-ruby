@@ -3,8 +3,10 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
+import { Button, Grid, Typography, TextField } from "@mui/material";
 import ROUTES from "../../src/config/routes";
 import CategoryService from "../../src/services/CategoryService";
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 function NewCategory() {
   const router = useRouter()
@@ -23,25 +25,30 @@ function NewCategory() {
   }
   return (
     <>
-      <p>Tela de Cadastro de Categoria</p>
+   <Grid xs={6}>
+        <Typography variant="h4">Tela de Cadastro de Categoria</Typography>
+      </Grid>
       <p>
         <Link
           href={{
             pathname: ROUTES.categories.list,
           }}
         >
-          <a>Cancelar</a>
+          <Button variant="contained" size="small" startIcon={<ArrowBackIcon fontSize="small" />}>
+            Voltar ao Inicio
+          </Button>
         </Link>
       </p>
 
       <form onSubmit={handleSubmit((data) => insertCategory(data))}>
         <div className="field">
-          <label>Nome</label>
-          <input {...register("name", { required: true })} />
-          {errors.name && <p>category is required.</p>}
+          <TextField label="Nome" variant="standard" {...register("name", { required: true })}/>
+          {errors.title && <p>Name is required.</p>}
         </div>
 
-        <input type="submit" />
+        <Button variant="contained" color="success" type="submit">
+          Salvar
+        </Button>
       </form>
     </>
   );

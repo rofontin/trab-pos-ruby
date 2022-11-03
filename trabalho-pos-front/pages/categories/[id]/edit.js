@@ -12,11 +12,14 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 function EditCategory() {
   const router = useRouter();
   const { id } = router.query;
-  const [categorie, setCategorie] = useState([]);
+  const [category, setCategory] = useState({});
   
   useEffect(() => {
+    if(!id) return
+
     CategoryService.getById(id).then((data) => {
-      setCategorie(data)
+      setCategory(data)
+      setValue("name", data.name)
     })
   }, [id])
 
@@ -24,10 +27,11 @@ function EditCategory() {
     register,
     handleSubmit,
     formState: { errors },
+    setValue
   } = useForm();
 
-  const updateCategory = (categorie) => {
-    CategoryService.update(id, categorie).then((data) => {
+  const updateCategory = (category) => {
+    CategoryService.update(id, category).then((data) => {
       router.push(ROUTES.categories.list)
       toast.success(`Category successfully updated!`)
     }).catch((e) => {
@@ -35,14 +39,14 @@ function EditCategory() {
     })
   }
 
-  if (!categorie) return `Carregando...`
+  if (!category) return `Carregando...`
 
-  console.log(categorie)
+  console.log(id, category)
 
   return (
     <>
       <Grid xs={6}>
-        <Typography variant="h4">Página de Edição do artigo: {id}</Typography>
+        <Typography variant="h4">Página de Edição do categoria: {id}</Typography>
       </Grid>
       <p>
         <Link
@@ -58,7 +62,7 @@ function EditCategory() {
 
       <form onSubmit={handleSubmit((data) => updateCategory(data))}>
         <div className="field">
-          <TextField label="Nome" variant="standard" {...register("name", { required: true })} InputLabelProps={{shrink: true,}} defaultValue={categorie.name} />
+          <TextField label="Nome" variant="standard" {...register("name", { required: true })} InputLabelProps={{ shrink: !!category.name }}/>
           {errors.title && <p>Name is required.</p>}
         </div>
 
