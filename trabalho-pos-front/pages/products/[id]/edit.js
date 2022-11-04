@@ -64,6 +64,8 @@ function EditProduct() {
         <div className="field">
           <TextField label="Nome" variant="standard" {...register("name", { required: true })} InputLabelProps={{ shrink: !!product.name }}/>
           {errors.title && <p>Name is required.</p>}
+          <TextField label="Valor" variant="standard" {...register("value", { required: true })}/>
+          {errors.title && <p>Value is required.</p>}
         </div>
 
         <Button variant="contained" color="success" type="submit">

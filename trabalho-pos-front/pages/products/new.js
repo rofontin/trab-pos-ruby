@@ -44,8 +44,9 @@ function NewProduct() {
         <div className="field">
           <TextField label="Nome" variant="standard" {...register("name", { required: true })}/>
           {errors.title && <p>Name is required.</p>}
+          <TextField label="Valor" variant="standard" {...register("value", { required: true })}/>
+          {errors.title && <p>Value is required.</p>}
         </div>
-
         <Button variant="contained" color="success" type="submit">
           Salvar
         </Button>

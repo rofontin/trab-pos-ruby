@@ -26,7 +26,7 @@ const ProductService = {
   update: async(id, product) => {
     if (!id && !product) return
 
-    let response = await axiosInstance.put(`/articles/${id}`, { product: product })
+    let response = await axiosInstance.put(`/categories/${id}`, { product: product })
     return response.products
   }
 
