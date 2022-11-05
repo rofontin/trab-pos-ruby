@@ -61,7 +61,7 @@ function ShowProduct() {
                     </tr>
                     <tr>
                         <td><b>Categoria</b></td>
-                        <td>{product.category_id}</td>
+                        <td>{product.category.name}</td>
                     </tr>
                     <tr>
                         <td><b>Created At</b></td>

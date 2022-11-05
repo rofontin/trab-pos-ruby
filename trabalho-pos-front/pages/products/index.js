@@ -94,7 +94,7 @@ function ProductList() {
                     <td>{product.id}</td>
                     <td>{product.name}</td>
                     <td>{product.value}</td>
-                    <td>{product.category_id}</td>
+                    <td>{product.category.name}</td>
                     <td>{product.created_at}</td>
                     <td>{product.updated_at}</td>
                     <td>
