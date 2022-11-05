@@ -1,7 +1,7 @@
 {
-  "/_app": "pages/_app.js",
-  "/_document": "pages/_document.js",
   "/_error": "pages/_error.js",
-  "/categories": "pages/categories.js",
-  "/categories/[id]/edit": "pages/categories/[id]/edit.js"
+  "/_document": "pages/_document.js",
+  "/_app": "pages/_app.js",
+  "/products": "pages/products.js",
+  "/products/[id]": "pages/products/[id].js"
 }

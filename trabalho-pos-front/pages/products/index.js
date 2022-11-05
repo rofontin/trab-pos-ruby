@@ -80,6 +80,8 @@ function ProductList() {
               <tr>
                 <th>ID</th>
                 <th>Name</th>
+                <th>Valor</th>
+                <th>Category</th>
                 <th>Created At</th>
                 <th>Updated At</th>
                 <th>&nbsp;</th>
@@ -91,6 +93,8 @@ function ProductList() {
                   <tr key={product.id}>
                     <td>{product.id}</td>
                     <td>{product.name}</td>
+                    <td>{product.value}</td>
+                    <td>{product.category_id}</td>
                     <td>{product.created_at}</td>
                     <td>{product.updated_at}</td>
                     <td>

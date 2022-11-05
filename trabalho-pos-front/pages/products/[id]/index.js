@@ -56,6 +56,14 @@ function ShowProduct() {
                         <td>{product.name}</td>
                     </tr>
                     <tr>
+                        <td><b>Valor</b></td>
+                        <td>{product.value}</td>
+                    </tr>
+                    <tr>
+                        <td><b>Catregoria</b></td>
+                        <td>{product.category_id}</td>
+                    </tr>
+                    <tr>
                         <td><b>Created At</b></td>
                         <td>{product.created_at}</td>
                     </tr>
