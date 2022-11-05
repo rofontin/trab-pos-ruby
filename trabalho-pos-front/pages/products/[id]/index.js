@@ -60,7 +60,7 @@ function ShowProduct() {
                         <td>{product.value}</td>
                     </tr>
                     <tr>
-                        <td><b>Catregoria</b></td>
+                        <td><b>Categoria</b></td>
                         <td>{product.category_id}</td>
                     </tr>
                     <tr>

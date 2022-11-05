@@ -5,12 +5,12 @@ class CategoriesController < ApplicationController
   def index
     @categories = Category.all
 
-    render json: @categories
+    render json: @categories, include: [:products]
   end
 
   # GET /categories/1
   def show
-    render json: @category
+    render json: @category, include: [:products]
   end
 
   # POST /categories
@@ -27,7 +27,7 @@ class CategoriesController < ApplicationController
   # PATCH/PUT /categories/1
   def update
     if @category.update(category_params)
-      render json: @category
+      render json: @category, include: [:products]
     else
       render json: @category.errors, status: :unprocessable_entity
     end
